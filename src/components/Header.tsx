@@ -55,9 +55,9 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
           <Logo />
         </motion.div>
         
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-5">
           <nav>
-            <ul className="flex space-x-5">
+            <ul className="flex items-center space-x-4">
               {navLinks.map((link, index) => (
                 <motion.li 
                   key={link.name}
@@ -67,14 +67,14 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
                 >
                   <a 
                     href={link.href}
-                    className={`relative font-medium transition-all duration-300 group ${
+                    className={`relative text-sm font-medium whitespace-nowrap transition-all duration-300 group ${
                       scrolled
                         ? 'text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400'
                         : 'text-white hover:text-blue-300'
                     }`}
                   >
                     {link.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+                    <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
                   </a>
                 </motion.li>
               ))}
