@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
-          <Logo />
+          <Logo white={!scrolled || darkMode} />
         </motion.div>
         
         <div className="hidden md:flex items-center space-x-5">
