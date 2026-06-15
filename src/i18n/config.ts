@@ -3,10 +3,9 @@ import { initReactI18next } from 'react-i18next';
 import enTranslation from './locales/en';
 import elTranslation from './locales/el';
 
-// Get saved language from localStorage or use browser language
+// Get saved language from localStorage or default to Greek
 const savedLanguage = localStorage.getItem('language');
-const browserLanguage = navigator.language.startsWith('el') ? 'el' : 'en';
-const defaultLanguage = savedLanguage || browserLanguage;
+const defaultLanguage = savedLanguage || 'el';
 
 i18n.use(initReactI18next).init({
   resources: {

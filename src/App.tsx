@@ -18,13 +18,11 @@ import './i18n/config';
 function App() {
   const { i18n } = useTranslation();
   const [darkMode, setDarkMode] = useState(() => {
-    // Check localStorage first
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode !== null) {
       return savedMode === 'true';
     }
-    // If no saved preference, check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return false;
   });
 
   useEffect(() => {
