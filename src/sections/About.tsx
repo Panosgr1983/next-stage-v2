@@ -31,6 +31,10 @@ console.log(t('about.title'));
               <img 
                 src="https://images.pexels.com/photos/4792733/pexels-photo-4792733.jpeg" 
                 alt="Computer repair technician" 
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-cover rounded-lg"
               />
             </div>
