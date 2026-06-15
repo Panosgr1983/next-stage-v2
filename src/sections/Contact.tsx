@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Loader2 } from 'lucide-react';
+
+const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -23,6 +25,8 @@ const Contact = () => {
     message?: string;
   } | null>(null);
 
+  const [sending, setSending] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -30,22 +34,42 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validate = () => {
+    if (!formData.name.trim()) return t('contact.formName');
+    if (!formData.email.trim()) return t('contact.formEmail');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return t('contact.formEmail');
+    if (!formData.message.trim()) return t('contact.formMessage');
+    return null;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would send the form data to a server
-    // For now, we'll simulate a successful submission
-    setTimeout(() => {
-      setFormStatus({
-        success: true,
-        message: t('contact.success')
+    const error = validate();
+    if (error) {
+      setFormStatus({ success: false, message: `Παρακαλώ συμπληρώστε το πεδίο: ${error}` });
+      return;
+    }
+
+    setSending(true);
+    setFormStatus(null);
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, _subject: 'NextStage Contact Form' })
       });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-    }, 1000);
+      if (res.ok) {
+        setFormStatus({ success: true, message: t('contact.success') });
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        setFormStatus({ success: false, message: t('contact.error') });
+      }
+    } catch {
+      setFormStatus({ success: false, message: t('contact.error') });
+    } finally {
+      setSending(false);
+    }
   };
 
   const contactInfo = [
@@ -198,12 +222,17 @@ const Contact = () => {
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6ab04c] focus:border-transparent resize-none dark:bg-slate-700 dark:text-white"
                 ></textarea>
               </div>
+              <div className="hidden" aria-hidden="true">
+                <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
+              </div>
               <motion.button
                 type="submit"
-                className="bg-[#6ab04c] hover:bg-[#5a9f3d] text-white font-semibold py-3 px-6 rounded-md transition-colors"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                disabled={sending}
+                className="bg-[#6ab04c] hover:bg-[#5a9f3d] text-white font-semibold py-3 px-6 rounded-md transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center gap-2"
+                whileHover={{ scale: sending ? 1 : 1.02 }}
+                whileTap={{ scale: sending ? 1 : 0.98 }}
               >
+                {sending && <Loader2 className="w-4 h-4 animate-spin" />}
                 {t('contact.formSubmit')}
               </motion.button>
             </form>
