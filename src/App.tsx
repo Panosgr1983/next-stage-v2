@@ -6,6 +6,7 @@ import WhyChooseUs from './sections/WhyChooseUs';
 import Reviews from './sections/Reviews';
 import Services from './sections/Services';
 import Process from './sections/Process';
+import FAQ from './sections/FAQ';
 import About from './sections/About';
 import Gallery from './sections/Gallery';
 import Testimonials from './sections/Testimonials';
@@ -46,6 +47,7 @@ function App() {
         <Reviews />
         <Services />
         <Process />
+        <FAQ />
         <About />
         <Gallery />
         <Testimonials />

@@ -99,6 +99,28 @@ export default {
     },
   },
   
+  // FAQ
+  faq: {
+    title: 'Frequently Asked Questions',
+    subtitle: 'Everything you need to know about our services',
+    q1: 'How much does diagnosis cost?',
+    a1: 'The initial diagnosis is free of charge, and we inform you of the cost before proceeding with any work.',
+    q2: 'How long does a repair take?',
+    a2: 'Most repairs are completed within 24-48 hours, depending on the issue and parts availability.',
+    q3: 'Do you offer a warranty?',
+    a3: 'Yes. All repairs come with a written warranty for proper operation.',
+    q4: 'Do you use genuine spare parts?',
+    a4: 'We use genuine or certified high-quality spare parts, depending on the device and repair needs.',
+    q5: 'Do you repair MacBooks and iMacs?',
+    a5: 'Yes. We have experience with Apple devices as well as laptops and desktops from all major manufacturers.',
+    q6: 'Can I bring my device without an appointment?',
+    a6: 'Yes, you can visit our store during business hours.',
+    q7: 'What about my data?',
+    a7: 'Your personal files remain safe and we do not access them without your consent.',
+    q8: 'Is it worth repairing my computer or should I buy a new one?',
+    a8: 'After diagnosis, we recommend the most cost-effective solution, whether it is repair or upgrade.',
+  },
+
   // About Section
   about: {
     title: 'About NextStage',
