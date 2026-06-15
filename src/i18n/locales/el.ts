@@ -5,15 +5,15 @@ export default {
     services: 'Υπηρεσίες',
     about: 'Σχετικά με εμάς',
     gallery: 'Ο Χώρος μας',
-    whyChooseUs: 'Γιατί Εμείς',
     testimonials: 'Αξιολογήσεις',
     contact: 'Επικοινωνία',
   },
   
   // Hero Section
   hero: {
-    title: 'Επισκευή Laptop, Desktop & Mac με Εγγύηση',
-    subtitle: 'Άμεση διάγνωση, γνήσια ανταλλακτικά και εξειδικευμένη τεχνική υποστήριξη για κάθε τύπο υπολογιστή.',
+    titlePrefix: 'Επισκευή Laptop, Desktop & Mac με ',
+    titleHighlight: 'Εγγύηση',
+    subtitle: 'Άμεση διάγνωση, γνήσια ανταλλακτικά και εξειδικευμένη τεχνική υποστήριξη.',
     contactButton: 'Καλέστε Τώρα',
     servicesButton: 'Δωρεάν Διάγνωση',
     feature1Title: '100%',

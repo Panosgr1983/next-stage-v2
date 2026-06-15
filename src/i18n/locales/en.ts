@@ -5,15 +5,15 @@ export default {
     services: 'Services',
     about: 'About Us',
     gallery: 'Our Space',
-    whyChooseUs: 'Why Us',
     testimonials: 'Testimonials',
     contact: 'Contact',
   },
   
   // Hero Section
   hero: {
-    title: 'Laptop, Desktop & Mac Repair with Warranty',
-    subtitle: 'Immediate diagnosis, genuine spare parts and specialized technical support for every type of computer.',
+    titlePrefix: 'Laptop, Desktop & Mac Repair with ',
+    titleHighlight: 'Warranty',
+    subtitle: 'Immediate diagnosis, genuine spare parts and specialized technical support.',
     contactButton: 'Call Now',
     servicesButton: 'Free Diagnosis',
     cta: 'Our Services',

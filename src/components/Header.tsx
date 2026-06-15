@@ -29,9 +29,8 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
   };
 
   const navLinks = [
-    { name: t('nav.home'), href: '#home' },
-    { name: t('nav.whyChooseUs'), href: '#why-choose-us' },
     { name: t('nav.services'), href: '#services' },
+    { name: t('nav.about'), href: '#about' },
     { name: t('nav.gallery'), href: '#gallery' },
     { name: t('nav.testimonials'), href: '#testimonials' },
     { name: t('nav.contact'), href: '#contact' },
@@ -41,8 +40,8 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
     <motion.header 
       className={`fixed w-full z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-lg border-b border-white/10 py-2' 
-          : 'bg-transparent py-4'
+          ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-lg border-b border-white/10 py-1' 
+          : 'bg-transparent py-2'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -56,9 +55,9 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
           <Logo />
         </motion.div>
         
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           <nav>
-            <ul className="flex space-x-6">
+            <ul className="flex space-x-5">
               {navLinks.map((link, index) => (
                 <motion.li 
                   key={link.name}
@@ -125,11 +124,11 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
             
             <motion.a 
               href="tel:2102116016" 
-              className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-[#6ab04c] to-blue-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-[#6ab04c]/25 transition-all duration-300"
-              whileHover={{ scale: 1.05, y: -2 }}
+              className="flex items-center space-x-1.5 px-3 py-1.5 bg-gradient-to-r from-[#6ab04c] to-blue-600 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-[#6ab04c]/25 transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Phone size={18} />
+              <Phone size={14} />
               <span>210 21 16 016</span>
             </motion.a>
           </div>
