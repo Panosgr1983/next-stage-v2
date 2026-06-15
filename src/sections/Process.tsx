@@ -77,7 +77,7 @@ const Process = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="lg:pt-6">
+                  <div className="lg:pt-8">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       {step.title}
                     </h3>
