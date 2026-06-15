@@ -12,7 +12,7 @@ const FAQ = () => {
     threshold: 0.1
   });
 
-  const faqs = [1, 2, 3, 4, 5, 6, 7, 8].map((id) => ({
+  const faqs = [1, 2, 3, 4, 5, 6, 7, 8, 9].map((id) => ({
     question: t(`faq.q${id}`),
     answer: t(`faq.a${id}`),
   }));

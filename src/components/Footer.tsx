@@ -126,8 +126,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-          <p>© {currentYear} NextStage Technology Solutions. {t('footer.rights')}</p>
+        <div className="pt-6 pb-4 text-center text-slate-400 text-sm border-t border-slate-800">
+          <p className="mb-2">{t('footer.areas')}</p>
+          <p className="text-xs text-slate-500">© {currentYear} NextStage Technology Solutions. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

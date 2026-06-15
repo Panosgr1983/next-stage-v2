@@ -119,6 +119,8 @@ export default {
     a7: 'Your personal files remain safe and we do not access them without your consent.',
     q8: 'Is it worth repairing my computer or should I buy a new one?',
     a8: 'After diagnosis, we recommend the most cost-effective solution, whether it is repair or upgrade.',
+    q9: 'Do you only serve Galatsi?',
+    a9: 'No. We serve customers daily from Galatsi, Kypseli, Patisia, Nea Ionia, Nea Filadelfeia and the surrounding areas of Athens.',
   },
 
   // About Section
@@ -183,6 +185,12 @@ export default {
     error: 'There was an error sending your message. Please try again.',
   },
   
+  // Service Area
+  serviceArea: {
+    title: 'Service Area',
+    text: 'NextStage serves customers from Galatsi and the greater Athens area, including Kypseli, Patisia, Ano Patisia, Nea Ionia, Nea Filadelfeia, Gkyzi, Polygono, Psychiko and surrounding areas.',
+  },
+
   // Footer
   footer: {
     description: 'Professional repair and support for computers and electronic devices.',
@@ -190,6 +198,7 @@ export default {
     services: 'Services',
     contact: 'Contact Information',
     rights: 'All rights reserved',
+    areas: 'Galatsi • Kypseli • Patisia • Nea Ionia • Nea Filadelfeia',
   },
 
   // Accessibility

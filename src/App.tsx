@@ -11,6 +11,7 @@ import About from './sections/About';
 import Gallery from './sections/Gallery';
 import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
+import ServiceArea from './sections/ServiceArea';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import './i18n/config';
@@ -51,6 +52,7 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
+      <ServiceArea />
       <Footer />
       <ScrollToTop />
     </div>
