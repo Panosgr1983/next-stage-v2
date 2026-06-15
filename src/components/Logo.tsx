@@ -9,7 +9,7 @@ const Logo: React.FC = () => {
         alt="NextStage"
         width="1529"
         height="383"
-        className="h-12 w-auto"
+        className="h-12 w-auto dark:brightness-0 dark:invert"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       />
