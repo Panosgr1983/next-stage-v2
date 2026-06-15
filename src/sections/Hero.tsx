@@ -17,13 +17,13 @@ const Hero: React.FC = () => {
       id="home" 
       className="relative min-h-screen flex items-center pt-16 overflow-hidden"
     >
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" 
-        style={{ 
-          backgroundImage: 'url(/images/gallery/DSC_2938.jpg)',
-          backgroundPosition: '50% 50%'
-        }}
-      >
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/gallery/DSC_2938.webp"
+          alt=""
+          className="w-full h-full object-cover"
+          decoding="async"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/50"></div>
       </div>
 
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <a 
                 href="tel:2102116016"
-                className="inline-flex items-center px-8 py-4 bg-[#6ab04c] hover:bg-[#5a9f3d] text-white font-semibold rounded-md transition-all duration-300 shadow-lg shadow-[#6ab04c]/25 hover:shadow-[#6ab04c]/40 hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-[#4a8a30] hover:bg-[#3d7126] text-white font-semibold rounded-md transition-all duration-300 shadow-lg shadow-[#6ab04c]/25 hover:shadow-[#6ab04c]/40 hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 {t('hero.contactButton')}
@@ -78,10 +78,10 @@ const Hero: React.FC = () => {
                 <div className="flex justify-center mb-3">
                   {features[i].icon}
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-1">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-1">
                   {t(`hero.feature${i + 1}Title`)}
-                </h3>
-                <p className="text-slate-300 text-sm uppercase tracking-wider">
+                  </h2>
+                  <p className="text-slate-300 text-sm uppercase tracking-wider">
                   {t(`hero.feature${i + 1}Text`)}
                 </p>
               </div>

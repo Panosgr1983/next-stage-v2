@@ -22,7 +22,7 @@ const Services = () => {
   const services = [
     {
       icon: <Laptop className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/3568520/pexels-photo-3568520.jpeg",
+      image: "/images/gallery/DSC_2814.webp",
       title: t('services.laptopRepair.title'),
       description: t('services.laptopRepair.description'),
       gradient: 'from-[#6ab04c] to-green-500',
@@ -30,7 +30,7 @@ const Services = () => {
     },
     {
       icon: <Monitor className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg",
+      image: "/images/gallery/DSC_2801.webp",
       title: t('services.desktopRepair.title'),
       description: t('services.desktopRepair.description'),
       gradient: 'from-blue-500 to-cyan-500',
@@ -38,7 +38,7 @@ const Services = () => {
     },
     {
       icon: <Monitor className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg",
+      image: "/images/gallery/DSC_2785.webp",
       title: t('services.imacRepair.title'),
       description: t('services.imacRepair.description'),
       gradient: 'from-[#6ab04c] to-emerald-500',
@@ -46,7 +46,7 @@ const Services = () => {
     },
     {
       icon: <Laptop className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      image: "/images/gallery/DSC_2938.webp",
       title: t('services.macbookRepair.title'),
       description: t('services.macbookRepair.description'),
       gradient: 'from-blue-600 to-purple-500',
@@ -54,7 +54,7 @@ const Services = () => {
     },
     {
       icon: <Server className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg",
+      image: "/images/gallery/DSC_2796.webp",
       title: t('services.macMiniRepair.title'),
       description: t('services.macMiniRepair.description'),
       gradient: 'from-[#6ab04c] to-blue-500',
@@ -62,7 +62,7 @@ const Services = () => {
     },
     {
       icon: <HardDrive className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg",
+      image: "/images/gallery/DSC_2792.webp",
       title: t('services.dataRecovery.title'),
       description: t('services.dataRecovery.description'),
       gradient: 'from-green-500 to-[#6ab04c]',
@@ -70,7 +70,7 @@ const Services = () => {
     },
     {
       icon: <Building2 className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg",
+      image: "/images/gallery/DSC_2926.webp",
       title: t('services.supportContract.title'),
       description: t('services.supportContract.description'),
       gradient: 'from-purple-500 to-pink-500',
@@ -78,7 +78,7 @@ const Services = () => {
     },
     {
       icon: <Terminal className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+      image: "/images/gallery/DSC_2932.webp",
       title: t('services.osInstallation.title'),
       description: t('services.osInstallation.description'),
       gradient: 'from-orange-500 to-red-500',

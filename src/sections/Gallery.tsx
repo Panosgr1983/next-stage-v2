@@ -14,20 +14,20 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const galleryImages = [
-    { src: "/images/gallery/DSC_2814.jpg", alt: "Χώρος επισκευής" },
-    { src: "/images/gallery/DSC_2810.jpg", alt: "Εργαστήριο" },
-    { src: "/images/gallery/DSC_2801.jpg", alt: "Πάγκος εργασίας" },
-    { src: "/images/gallery/DSC_2796.jpg", alt: "Εξοπλισμός" },
-    { src: "/images/gallery/DSC_2792.jpg", alt: "Εργαλεία επισκευής" },
-    { src: "/images/gallery/DSC_2785.jpg", alt: "Χώρος εργασίας" },
-    { src: "/images/gallery/DSC_2938.jpg", alt: "Τεχνικός στη δουλειά" },
-    { src: "/images/gallery/DSC_2932.jpg", alt: "Διάγνωση προβλήματος" },
-    { src: "/images/gallery/DSC_2929.jpg", alt: "Επισκευή υπολογιστή" },
-    { src: "/images/gallery/DSC_2926.jpg", alt: "Σέρβις" },
-    { src: "/images/gallery/DSC_2924.jpg", alt: "Αναβάθμιση" },
-    { src: "/images/gallery/DSC_2922.jpg", alt: "Συντήρηση" },
-    { src: "/images/gallery/DSC_2914.jpg", alt: "Εργασία ακριβείας" },
-    { src: "/images/gallery/DSC_2906.jpg", alt: "Ο χώρος μας" },
+    { src: "/images/gallery/DSC_2814.webp", alt: "Χώρος επισκευής" },
+    { src: "/images/gallery/DSC_2810.webp", alt: "Εργαστήριο" },
+    { src: "/images/gallery/DSC_2801.webp", alt: "Πάγκος εργασίας" },
+    { src: "/images/gallery/DSC_2796.webp", alt: "Εξοπλισμός" },
+    { src: "/images/gallery/DSC_2792.webp", alt: "Εργαλεία επισκευής" },
+    { src: "/images/gallery/DSC_2785.webp", alt: "Χώρος εργασίας" },
+    { src: "/images/gallery/DSC_2938.webp", alt: "Τεχνικός στη δουλειά" },
+    { src: "/images/gallery/DSC_2932.webp", alt: "Διάγνωση προβλήματος" },
+    { src: "/images/gallery/DSC_2929.webp", alt: "Επισκευή υπολογιστή" },
+    { src: "/images/gallery/DSC_2926.webp", alt: "Σέρβις" },
+    { src: "/images/gallery/DSC_2924.webp", alt: "Αναβάθμιση" },
+    { src: "/images/gallery/DSC_2922.webp", alt: "Συντήρηση" },
+    { src: "/images/gallery/DSC_2914.webp", alt: "Εργασία ακριβείας" },
+    { src: "/images/gallery/DSC_2906.webp", alt: "Ο χώρος μας" },
   ];
 
   const containerVariants = {
@@ -90,6 +90,10 @@ const Gallery = () => {
               <img
                 src={image.src}
                 alt={image.alt}
+                width="768"
+                height="512"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

@@ -77,7 +77,7 @@ const Testimonials = () => {
               <p className="text-gray-600 dark:text-gray-300 mb-6 italic text-lg">"{testimonial.text}"</p>
               <div className="flex items-center">
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-xl">{testimonial.name}</h4>
+                  <h3 className="font-semibold text-gray-900 dark:text-white text-xl">{testimonial.name}</h3>
                   <p className="text-sm text-[#6ab04c]">{t('testimonials.client')}</p>
                 </div>
               </div>
