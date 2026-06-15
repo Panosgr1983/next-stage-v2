@@ -5,24 +5,37 @@ export default {
     services: 'Services',
     about: 'About Us',
     gallery: 'Our Space',
+    whyChooseUs: 'Why Us',
     testimonials: 'Testimonials',
     contact: 'Contact',
   },
   
   // Hero Section
   hero: {
-    title: 'Guaranteed Repairs',
-    subtitle: 'Our technicians provide high quality repair services.',
-    contactButton: '210 21 16 016',
-    servicesButton: 'Our Services',
+    title: 'Laptop, Desktop & Mac Repair with Warranty',
+    subtitle: 'Immediate diagnosis, genuine spare parts and specialized technical support for every type of computer.',
+    contactButton: 'Call Now',
+    servicesButton: 'Free Diagnosis',
     cta: 'Our Services',
     secondary: 'Contact Us',
-    feature1Title: 'Genuine Parts',
-    feature1Text: 'We use genuine spare parts that come with warranty.',
-    feature2Title: 'Repair Guarantee',
-    feature2Text: 'We offer fast and affordable service in computer repair and upgrades.',
-    feature3Title: 'POS Payment',
-    feature3Text: 'We offer POS payment options. All cards accepted.',
+    feature1Title: '100%',
+    feature1Text: 'Genuine Parts',
+    feature2Title: '24-48h',
+    feature2Text: 'Repair Time',
+    feature3Title: '6 Months',
+    feature3Text: 'Warranty',
+  },
+  
+  // Why Choose Us
+  whyChooseUs: {
+    title: 'Why Choose NextStage',
+    subtitle: 'Reliability, experience and quality in every repair',
+    reason1: 'Specialization in Laptop, Desktop & Mac',
+    reason2: 'High quality genuine spare parts',
+    reason3: 'Warranty on every repair',
+    reason4: 'Fast diagnosis and cost estimate',
+    reason5: 'Support before and after the repair',
+    reason6: 'Over 10 years of experience',
   },
   
   // Services Section

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Hero from './sections/Hero';
+import WhyChooseUs from './sections/WhyChooseUs';
 import Services from './sections/Services';
 import About from './sections/About';
 import Gallery from './sections/Gallery';
@@ -39,6 +40,7 @@ function App() {
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <main>
         <Hero />
+        <WhyChooseUs />
         <Services />
         <About />
         <Gallery />

@@ -1,10 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ChevronDown, Clock, Shield, Cpu } from 'lucide-react';
+import { ChevronDown, Phone, Wrench, Award, Clock } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
+
+  const features = [
+    { icon: <Award className="w-8 h-8 text-[#6ab04c]" /> },
+    { icon: <Clock className="w-8 h-8 text-[#6ab04c]" /> },
+    { icon: <Wrench className="w-8 h-8 text-[#6ab04c]" /> },
+  ];
 
   return (
     <section 
@@ -28,25 +34,33 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#6ab04c]/20 border border-[#6ab04c]/30 backdrop-blur-sm mb-6">
+              <Wrench className="w-4 h-4 text-[#6ab04c] mr-2" />
+              <span className="text-[#6ab04c] text-sm font-medium">
+                {t('nav.home')} — {t('nav.services')}
+              </span>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               {t('hero.title')}
             </h1>
             
-            <p className="text-xl text-slate-300 mb-8">
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl">
               {t('hero.subtitle')}
             </p>
 
             <div className="flex flex-wrap gap-4">
               <a 
-                href="#contact"
-                className="px-8 py-3 bg-[#6ab04c] hover:bg-[#5a9f3d] text-white font-medium rounded-md transition-colors duration-300"
+                href="tel:2102116016"
+                className="inline-flex items-center px-8 py-4 bg-[#6ab04c] hover:bg-[#5a9f3d] text-white font-semibold rounded-md transition-all duration-300 shadow-lg shadow-[#6ab04c]/25 hover:shadow-[#6ab04c]/40 hover:scale-105"
               >
+                <Phone className="w-5 h-5 mr-2" />
                 {t('hero.contactButton')}
               </a>
               
               <a 
-                href="#services"
-                className="px-8 py-3 bg-transparent border border-white/30 hover:border-white/70 text-white font-medium rounded-md transition-colors duration-300"
+                href="#contact"
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20 text-white font-medium rounded-md transition-all duration-300 hover:scale-105"
               >
                 {t('hero.servicesButton')}
               </a>
@@ -59,23 +73,19 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-              <Clock className="w-10 h-10 text-[#6ab04c] mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">{t('hero.feature1Title')}</h3>
-              <p className="text-slate-300">{t('hero.feature1Text')}</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-              <Cpu className="w-10 h-10 text-[#6ab04c] mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">{t('hero.feature2Title')}</h3>
-              <p className="text-slate-300">{t('hero.feature2Text')}</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-              <Shield className="w-10 h-10 text-[#6ab04c] mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">{t('hero.feature3Title')}</h3>
-              <p className="text-slate-300">{t('hero.feature3Text')}</p>
-            </div>
+            {[0, 1, 2].map((i) => (
+              <div key={i} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/10 text-center">
+                <div className="flex justify-center mb-3">
+                  {features[i].icon}
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-1">
+                  {t(`hero.feature${i + 1}Title`)}
+                </h3>
+                <p className="text-slate-300 text-sm uppercase tracking-wider">
+                  {t(`hero.feature${i + 1}Text`)}
+                </p>
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>

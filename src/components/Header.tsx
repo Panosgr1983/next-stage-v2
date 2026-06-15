@@ -30,8 +30,8 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
 
   const navLinks = [
     { name: t('nav.home'), href: '#home' },
+    { name: t('nav.whyChooseUs'), href: '#why-choose-us' },
     { name: t('nav.services'), href: '#services' },
-    { name: t('nav.about'), href: '#about' },
     { name: t('nav.gallery'), href: '#gallery' },
     { name: t('nav.testimonials'), href: '#testimonials' },
     { name: t('nav.contact'), href: '#contact' },
