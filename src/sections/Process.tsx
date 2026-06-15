@@ -77,12 +77,14 @@ const Process = () => {
                       </span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-xs">
-                    {step.text}
-                  </p>
+                  <div className="lg:pt-3">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-xs">
+                      {step.text}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}
