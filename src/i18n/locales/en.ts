@@ -37,6 +37,29 @@ export default {
     reason5: 'Support before and after the repair',
     reason6: 'Over 10 years of experience',
   },
+
+  // Reviews
+  reviews: {
+    rating: '4.9 / 5',
+    stars: '★★★★★',
+    count: 'Based on 50+ customer reviews',
+    text: 'Hundreds of customers trust NextStage',
+    cta: 'See all reviews',
+  },
+
+  // Process
+  process: {
+    title: 'How We Work',
+    subtitle: '4 simple steps for your device repair',
+    step1Title: 'Drop Off',
+    step1Text: 'Bring your device to our store or call for immediate support.',
+    step2Title: 'Free Diagnosis',
+    step2Text: 'We perform a full inspection and inform you about the repair cost.',
+    step3Title: 'Repair',
+    step3Text: 'We proceed with the repair using genuine parts with warranty.',
+    step4Title: 'Delivery',
+    step4Text: 'Your device is returned ready, with a full warranty.',
+  },
   
   // Services Section
   services: {

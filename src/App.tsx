@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Hero from './sections/Hero';
 import WhyChooseUs from './sections/WhyChooseUs';
+import Reviews from './sections/Reviews';
 import Services from './sections/Services';
+import Process from './sections/Process';
 import About from './sections/About';
 import Gallery from './sections/Gallery';
 import Testimonials from './sections/Testimonials';
@@ -41,7 +43,9 @@ function App() {
       <main>
         <Hero />
         <WhyChooseUs />
+        <Reviews />
         <Services />
+        <Process />
         <About />
         <Gallery />
         <Testimonials />
