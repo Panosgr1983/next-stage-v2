@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ClipboardCheck, Search, Wrench, Package } from 'lucide-react';
+import { ClipboardCheck, Search, Phone, Wrench, Package } from 'lucide-react';
 
 const Process = () => {
   const { t } = useTranslation();
@@ -24,15 +24,21 @@ const Process = () => {
       color: 'from-[#6ab04c] to-green-500',
     },
     {
-      icon: <Wrench className="w-8 h-8 text-white" />,
+      icon: <Phone className="w-8 h-8 text-white" />,
       title: t('process.step3Title'),
       text: t('process.step3Text'),
+      color: 'from-amber-500 to-orange-500',
+    },
+    {
+      icon: <Wrench className="w-8 h-8 text-white" />,
+      title: t('process.step4Title'),
+      text: t('process.step4Text'),
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: <Package className="w-8 h-8 text-white" />,
-      title: t('process.step4Title'),
-      text: t('process.step4Text'),
+      title: t('process.step5Title'),
+      text: t('process.step5Text'),
       color: 'from-orange-500 to-red-500',
     },
   ];
@@ -55,9 +61,9 @@ const Process = () => {
         </motion.div>
 
         <div ref={ref} className="relative">
-          <div className="hidden lg:block absolute top-24 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-blue-500 via-[#6ab04c] via-purple-500 to-orange-500 opacity-30"></div>
+          <div className="hidden lg:block absolute top-24 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-blue-500 via-[#6ab04c] via-amber-500 via-purple-500 to-orange-500 opacity-30"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={index}

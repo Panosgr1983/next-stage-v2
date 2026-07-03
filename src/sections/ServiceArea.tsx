@@ -10,6 +10,8 @@ const ServiceArea = () => {
     threshold: 0.1,
   });
 
+  const areas = t('serviceArea.areas', { returnObjects: true }) as string[];
+
   return (
     <section className="py-16 bg-slate-50 dark:bg-slate-800/50">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -26,9 +28,22 @@ const ServiceArea = () => {
               {t('serviceArea.title')}
             </span>
           </div>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
             {t('serviceArea.text')}
           </p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {areas.map((area, index) => (
+              <motion.span
+                key={area}
+                className="inline-block px-3 py-1.5 bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300 text-sm rounded-lg border border-gray-200 dark:border-slate-700 shadow-sm"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+              >
+                {area}
+              </motion.span>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

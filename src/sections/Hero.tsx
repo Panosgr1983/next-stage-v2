@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ChevronDown, Phone, Award, Clock, Wrench } from 'lucide-react';
+import { ChevronDown, Phone, Award, Clock, Wrench, Star } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();

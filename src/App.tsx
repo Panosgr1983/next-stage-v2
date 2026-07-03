@@ -12,7 +12,6 @@ import Gallery from './sections/Gallery';
 import Testimonials from './sections/Testimonials';
 import Sales from './sections/Sales';
 import Contact from './sections/Contact';
-import ServiceArea from './sections/ServiceArea';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import './i18n/config';
@@ -46,15 +45,14 @@ function App() {
         <WhyChooseUs />
         <Reviews />
         <Services />
+        <Sales />
         <Process />
         <FAQ />
         <About />
         <Gallery />
         <Testimonials />
-        <Sales />
         <Contact />
       </main>
-      <ServiceArea />
       <Footer />
       <ScrollToTop />
     </div>

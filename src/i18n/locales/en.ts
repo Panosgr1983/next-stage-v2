@@ -15,7 +15,7 @@ export default {
     titleHighlight: 'Guarantee',
     subtitle: 'Specialized technical support for computers, Macs, TVs, home audio systems and gaming consoles.',
     contactButton: 'Call Now',
-    servicesButton: 'Free Diagnosis',
+    servicesButton: 'Contact Form',
     cta: 'Our Services',
     secondary: 'Contact Us',
     feature1Title: '100%',
@@ -54,11 +54,13 @@ export default {
     step1Title: 'Drop Off',
     step1Text: 'Bring your device to our store. We do not provide phone diagnosis.',
     step2Title: 'Diagnosis',
-    step2Text: 'We perform a full inspection (€10 minimum check fee) and inform you of the repair cost.',
-    step3Title: 'Approval & Repair',
-    step3Text: 'Only after your approval do we proceed with the repair using high quality parts.',
-    step4Title: 'Delivery',
-    step4Text: 'Pick up your device from the store with a receipt that serves as your warranty.',
+    step2Text: 'We perform a full inspection (€10 minimum check fee) and inform you of the cost.',
+    step3Title: 'Contact & Approval',
+    step3Text: 'We inform you of the cost and proceed only after your approval.',
+    step4Title: 'Repair',
+    step4Text: 'We proceed with the repair using high quality parts.',
+    step5Title: 'Delivery & Warranty',
+    step5Text: 'Pick up your device from the store with a receipt that serves as your warranty.',
   },
   
   // Services Section
@@ -79,7 +81,7 @@ export default {
     },
     macbookRepair: {
       title: 'MacBook Repair',
-      description: 'We repair any MacBook model with genuine parts.',
+      description: 'We repair any MacBook model with high quality parts.',
     },
     macMiniRepair: {
       title: 'Mac Mini Repair',
@@ -121,8 +123,8 @@ export default {
     a2: 'Most repairs are completed within 24-48 hours, depending on the issue and parts availability.',
     q3: 'Do you offer a warranty?',
     a3: 'Yes. All repairs come with a written warranty for proper operation.',
-    q4: 'Do you use genuine spare parts?',
-    a4: 'We use genuine or certified high-quality spare parts, depending on the device and repair needs.',
+    q4: 'Do you use high quality spare parts?',
+    a4: 'We use high quality spare parts, depending on the device and repair needs.',
     q5: 'Do you repair MacBooks and iMacs?',
     a5: 'Yes. We have experience with Apple devices as well as laptops and desktops from all major manufacturers.',
     q6: 'Can I bring my device without an appointment?',
@@ -132,7 +134,7 @@ export default {
     q8: 'Is it worth repairing my computer or should I buy a new one?',
     a8: 'After diagnosis, we recommend the most cost-effective solution, whether it is repair or upgrade.',
     q9: 'Do you only serve Galatsi?',
-    a9: 'No. We serve customers daily from Galatsi, Kypseli, Patisia, Ano Patisia, Kato Patisia, Nea Ionia, Nea Filadelfeia, Perissos, Kalograiza, Gkyzi, Polygono, Rizoupoli, Agios Eleftherios, Nea Chalkidona, Exarcheia, Pedion Areos, Ambelokipi, Psychiko, Neo Psychiko, Filothei and the surrounding areas of Athens.',
+    a9: 'Based in Galatsi, we serve individuals and businesses daily from Kypseli, Patisia (Ano & Kato), Nea Ionia, Nea Filadelfeia, Perissos, Kalograiza, Gkyzi, Polygono, Rizoupoli, Agios Eleftherios, Nea Chalkidona, Exarcheia, Pedion tou Areos, Ambelokipi, Psychiko, Neo Psychiko, Filothei, as well as all of Attica.',
   },
 
   // About Section
@@ -216,7 +218,13 @@ export default {
   // Service Area
   serviceArea: {
     title: 'Service Area',
-    text: 'NextStage serves customers from Galatsi and the greater Athens area, including Kypseli, Patisia, Ano Patisia, Kato Patisia, Nea Ionia, Nea Filadelfeia, Perissos, Kalograiza, Gkyzi, Polygono, Rizoupoli, Agios Eleftherios, Nea Chalkidona, Exarcheia, Pedion Areos, Ambelokipi, Psychiko, Neo Psychiko, Filothei and surrounding areas.',
+    text: 'Based in Galatsi, we serve individuals and businesses daily from Kypseli, Patisia (Ano & Kato), Nea Ionia, Nea Filadelfeia, Perissos, Kalograiza, Gkyzi, Polygono, Rizoupoli, Agios Eleftherios, Nea Chalkidona, Exarcheia, Pedion tou Areos, Ambelokipi, Psychiko, Neo Psychiko, Filothei, as well as all of Attica.',
+    areas: [
+      'Galatsi', 'Kypseli', 'Patisia', 'Ano Patisia', 'Kato Patisia',
+      'Nea Ionia', 'Nea Filadelfeia', 'Perissos', 'Kalograiza', 'Gkyzi',
+      'Polygono', 'Rizoupoli', 'Agios Eleftherios', 'Nea Chalkidona', 'Exarcheia',
+      'Pedion tou Areos', 'Ambelokipi', 'Psychiko', 'Neo Psychiko', 'Filothei',
+    ],
   },
 
   // Footer
