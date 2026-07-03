@@ -99,9 +99,13 @@ const Contact = () => {
       title: t('contact.hours'),
       details: (
         <>
-          <p>{t('contact.weekdays')}</p>
-          <p>{t('contact.saturday')}</p>
-          <p>{t('contact.sunday')}</p>
+          <p>{t('contact.day1')}</p>
+          <p>{t('contact.day2')}</p>
+          <p>{t('contact.day3')}</p>
+          <p>{t('contact.day4')}</p>
+          <p>{t('contact.day5')}</p>
+          <p>{t('contact.day6')}</p>
+          <p>{t('contact.day7')}</p>
         </>
       ),
       link: null,

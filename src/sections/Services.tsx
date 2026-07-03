@@ -8,6 +8,9 @@ import {
   HardDrive,
   Building2,
   Terminal,
+  Gamepad2,
+  Music,
+  Tv,
   Sparkles,
   ArrowRight
 } from 'lucide-react';
@@ -69,12 +72,36 @@ const Services = () => {
       bgGradient: 'from-green-500/20 to-[#6ab04c]/20'
     },
     {
-      icon: <Building2 className="w-8 h-8" />,
+      icon: <Gamepad2 className="w-8 h-8" />,
+      image: "/images/gallery/DSC_2938.webp",
+      title: t('services.gamingPc.title'),
+      description: t('services.gamingPc.description'),
+      gradient: 'from-red-500 to-orange-500',
+      bgGradient: 'from-red-500/20 to-orange-500/20'
+    },
+    {
+      icon: <Music className="w-8 h-8" />,
       image: "/images/gallery/DSC_2926.webp",
-      title: t('services.supportContract.title'),
-      description: t('services.supportContract.description'),
+      title: t('services.proAudio.title'),
+      description: t('services.proAudio.description'),
       gradient: 'from-purple-500 to-pink-500',
       bgGradient: 'from-purple-500/20 to-pink-500/20'
+    },
+    {
+      icon: <Tv className="w-8 h-8" />,
+      image: "/images/gallery/DSC_2796.webp",
+      title: t('services.tvRepair.title'),
+      description: t('services.tvRepair.description'),
+      gradient: 'from-blue-500 to-cyan-500',
+      bgGradient: 'from-blue-500/20 to-cyan-500/20'
+    },
+    {
+      icon: <Building2 className="w-8 h-8" />,
+      image: "/images/gallery/DSC_2814.webp",
+      title: t('services.supportContract.title'),
+      description: t('services.supportContract.description'),
+      gradient: 'from-violet-500 to-indigo-500',
+      bgGradient: 'from-violet-500/20 to-indigo-500/20'
     },
     {
       icon: <Terminal className="w-8 h-8" />,
@@ -139,7 +166,7 @@ const Services = () => {
 
         <motion.div
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}

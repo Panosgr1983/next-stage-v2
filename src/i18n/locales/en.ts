@@ -12,30 +12,30 @@ export default {
   // Hero Section
   hero: {
     titlePrefix: 'Laptop, Desktop & Mac Repair with ',
-    titleHighlight: 'Warranty',
-    subtitle: 'Immediate diagnosis, genuine spare parts and specialized technical support.',
+    titleHighlight: 'Guarantee',
+    subtitle: 'Specialized technical support for computers, Macs, TVs, home audio systems and gaming consoles.',
     contactButton: 'Call Now',
     servicesButton: 'Free Diagnosis',
     cta: 'Our Services',
     secondary: 'Contact Us',
     feature1Title: '100%',
-    feature1Text: 'Genuine Parts',
+    feature1Text: 'High Quality Parts',
     feature2Title: '24-48h',
     feature2Text: 'Repair Time',
-    feature3Title: '6 Months',
-    feature3Text: 'Warranty',
+    feature3Title: '25+',
+    feature3Text: 'Years Experience',
   },
   
   // Why Choose Us
   whyChooseUs: {
     title: 'Why Choose NextStage',
     subtitle: 'Reliability, experience and quality in every repair',
-    reason1: 'Specialization in Laptop, Desktop & Mac',
-    reason2: 'High quality genuine spare parts',
-    reason3: 'Warranty on every repair',
+    reason1: 'Specialization in Laptop, Desktop, Mac & pro audio',
+    reason2: 'High quality spare parts',
+    reason3: 'Over 25 years of experience',
     reason4: 'Fast diagnosis and cost estimate',
     reason5: 'Support before and after the repair',
-    reason6: 'Over 10 years of experience',
+    reason6: 'Specialization in TVs, audio systems & consoles',
   },
 
   // Reviews
@@ -50,15 +50,15 @@ export default {
   // Process
   process: {
     title: 'How We Work',
-    subtitle: '4 simple steps for your device repair',
+    subtitle: 'Our device repair process',
     step1Title: 'Drop Off',
-    step1Text: 'Bring your device to our store or call for immediate support.',
-    step2Title: 'Free Diagnosis',
-    step2Text: 'We perform a full inspection and inform you about the repair cost.',
-    step3Title: 'Repair',
-    step3Text: 'We proceed with the repair using genuine parts with warranty.',
+    step1Text: 'Bring your device to our store. We do not provide phone diagnosis.',
+    step2Title: 'Diagnosis',
+    step2Text: 'We perform a full inspection (€10 minimum check fee) and inform you of the repair cost.',
+    step3Title: 'Approval & Repair',
+    step3Text: 'Only after your approval do we proceed with the repair using high quality parts.',
     step4Title: 'Delivery',
-    step4Text: 'Your device is returned ready, with a full warranty.',
+    step4Text: 'Pick up your device from the store with a receipt that serves as your warranty.',
   },
   
   // Services Section
@@ -67,7 +67,7 @@ export default {
     subtitle: 'We offer professional services, prompt and quality service for every customer.',
     laptopRepair: {
       title: 'Laptop Repair',
-      description: 'We repair all laptop models. Fast and affordable laptop repairs.',
+      description: 'We repair all laptop models. Fast and affordable repairs.',
     },
     desktopRepair: {
       title: 'Desktop Repair',
@@ -79,7 +79,7 @@ export default {
     },
     macbookRepair: {
       title: 'MacBook Repair',
-      description: 'We repair any MacBook model and offer top-tier services for your device with genuine spare parts.',
+      description: 'We repair any MacBook model with genuine parts.',
     },
     macMiniRepair: {
       title: 'Mac Mini Repair',
@@ -89,13 +89,25 @@ export default {
       title: 'Data Recovery',
       description: 'We undertake data recovery from any type of hard drive.',
     },
+    gamingPc: {
+      title: 'Custom Gaming PC Builds',
+      description: 'Custom Gaming PC builds with top-tier component selection.',
+    },
+    proAudio: {
+      title: 'Professional Audio Repair & Maintenance',
+      description: 'Specialized support for pro audio systems, amplifiers and equipment.',
+    },
+    tvRepair: {
+      title: 'TV, Home Audio & Console Repair',
+      description: 'Repairs for TVs, home audio systems and gaming consoles.',
+    },
     supportContract: {
       title: 'Technical Support Contracts',
       description: 'Technical support services exclusively for businesses.',
     },
     osInstallation: {
       title: 'OS Installation / Upgrade',
-      description: 'We install any operating system you desire and ensure its proper operation according to your needs.',
+      description: 'We install any operating system and ensure proper operation.',
     },
   },
   
@@ -104,7 +116,7 @@ export default {
     title: 'Frequently Asked Questions',
     subtitle: 'Everything you need to know about our services',
     q1: 'How much does diagnosis cost?',
-    a1: 'The initial diagnosis is free of charge, and we inform you of the cost before proceeding with any work.',
+    a1: 'The diagnosis has a €10 minimum check fee. We inform you of the repair cost and proceed only with your approval.',
     q2: 'How long does a repair take?',
     a2: 'Most repairs are completed within 24-48 hours, depending on the issue and parts availability.',
     q3: 'Do you offer a warranty?',
@@ -120,15 +132,15 @@ export default {
     q8: 'Is it worth repairing my computer or should I buy a new one?',
     a8: 'After diagnosis, we recommend the most cost-effective solution, whether it is repair or upgrade.',
     q9: 'Do you only serve Galatsi?',
-    a9: 'No. We serve customers daily from Galatsi, Kypseli, Patisia, Nea Ionia, Nea Filadelfeia and the surrounding areas of Athens.',
+    a9: 'No. We serve customers daily from Galatsi, Kypseli, Patisia, Nea Ionia, Nea Filadelfeia, Gkyzi, Polygono, Psychiko and the surrounding areas of Athens.',
   },
 
   // About Section
   about: {
     title: 'About NextStage',
     subtitle: 'Your Trusted Technology Partner',
-    description: 'With years of experience in technology, NextStage provides professional repair and support services for computers and electronic devices. Our team of specialized technicians is committed to delivering high-quality work and exceptional customer service.',
-    experience: 'Years Experience',
+    description: 'With over 25 years of experience in technology, NextStage provides professional repair and support services. From laptops and Macs to professional audio and consoles, our team of specialized technicians ensures top-quality repairs.',
+    experience: '25+ Years Experience',
     customers: 'Happy Customers',
     services: 'Services',
     certified: 'Certified Technicians',
@@ -168,9 +180,13 @@ export default {
     phone: 'Phone',
     email: 'Email',
     hours: 'Working Hours',
-    weekdays: 'Monday - Friday: 9:00 - 21:00',
-    saturday: 'Saturday: 9:00 - 15:00',
-    sunday: 'Sunday: Closed',
+    day1: 'Monday: 09:00 - 14:00',
+    day2: 'Tuesday: 09:00 - 14:00 & 17:30 - 20:00',
+    day3: 'Wednesday: 09:00 - 14:00',
+    day4: 'Thursday: 09:00 - 14:00 & 17:30 - 20:00',
+    day5: 'Friday: 09:00 - 14:00 & 17:30 - 20:00',
+    day6: 'Saturday: 09:00 - 14:00',
+    day7: 'Sunday: Closed',
     getInTouch: 'Get in Touch',
     contactInfo: 'Contact Information',
     viewOnMap: 'View on map',
@@ -185,6 +201,18 @@ export default {
     error: 'There was an error sending your message. Please try again.',
   },
   
+  // Sales Section
+  sales: {
+    title: 'Sales',
+    subtitle: 'Refurbished equipment, peripherals and accessories',
+    refurbished: 'Refurbished',
+    refurbishedDesc: 'Certified refurbished equipment with warranty',
+    refurbItems: 'PCs • Laptops • Monitors • Printers',
+    peripherals: 'Peripherals & Accessories',
+    peripheralsDesc: 'Everything you need for your setup',
+    peripheralItems: 'PCs • Laptops • Power • Storage • Gaming Consoles',
+  },
+
   // Service Area
   serviceArea: {
     title: 'Service Area',
