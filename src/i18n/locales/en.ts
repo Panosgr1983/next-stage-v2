@@ -132,7 +132,7 @@ export default {
     q8: 'Is it worth repairing my computer or should I buy a new one?',
     a8: 'After diagnosis, we recommend the most cost-effective solution, whether it is repair or upgrade.',
     q9: 'Do you only serve Galatsi?',
-    a9: 'No. We serve customers daily from Galatsi, Kypseli, Patisia, Nea Ionia, Nea Filadelfeia, Gkyzi, Polygono, Psychiko and the surrounding areas of Athens.',
+    a9: 'No. We serve customers daily from Galatsi, Kypseli, Patisia, Ano Patisia, Kato Patisia, Nea Ionia, Nea Filadelfeia, Perissos, Kalograiza, Gkyzi, Polygono, Rizoupoli, Agios Eleftherios, Nea Chalkidona, Exarcheia, Pedion Areos, Ambelokipi, Psychiko, Neo Psychiko, Filothei and the surrounding areas of Athens.',
   },
 
   // About Section
@@ -216,7 +216,7 @@ export default {
   // Service Area
   serviceArea: {
     title: 'Service Area',
-    text: 'NextStage serves customers from Galatsi and the greater Athens area, including Kypseli, Patisia, Ano Patisia, Nea Ionia, Nea Filadelfeia, Gkyzi, Polygono, Psychiko and surrounding areas.',
+    text: 'NextStage serves customers from Galatsi and the greater Athens area, including Kypseli, Patisia, Ano Patisia, Kato Patisia, Nea Ionia, Nea Filadelfeia, Perissos, Kalograiza, Gkyzi, Polygono, Rizoupoli, Agios Eleftherios, Nea Chalkidona, Exarcheia, Pedion Areos, Ambelokipi, Psychiko, Neo Psychiko, Filothei and surrounding areas.',
   },
 
   // Footer
@@ -226,7 +226,7 @@ export default {
     services: 'Services',
     contact: 'Contact Information',
     rights: 'All rights reserved',
-    areas: 'Galatsi • Kypseli • Patisia • Nea Ionia • Nea Filadelfeia',
+    areas: 'Galatsi • Kypseli • Patisia • Nea Ionia • Nea Filadelfeia • Gkyzi • Psychiko • Ambelokipi',
   },
 
   // Accessibility
