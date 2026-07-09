@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/50"></div>
       </div>
 
-      <div className="container mx-auto px-4 z-10 py-12 md:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 py-12 md:py-16">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
                     {f.icon}
                   </div>
                   <div className="text-left">
-                    <div className="text-lg md:text-xl font-bold text-white leading-none">{f.title}</div>
+                    <div className="text-lg md:text-xl font-bold text-white leading-none whitespace-nowrap">{f.title}</div>
                     <div className="text-xs text-slate-300 uppercase tracking-wider mt-0.5">{f.text}</div>
                   </div>
                 </div>

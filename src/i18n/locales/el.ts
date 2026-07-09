@@ -3,6 +3,7 @@ export default {
   nav: {
     home: 'Αρχική',
     services: 'Υπηρεσίες',
+    sales: 'Πωλήσεις',
     about: 'Σχετικά με εμάς',
     gallery: 'Ο Χώρος μας',
     testimonials: 'Αξιολογήσεις',

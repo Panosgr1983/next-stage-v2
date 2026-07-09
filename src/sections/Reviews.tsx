@@ -12,7 +12,7 @@ const Reviews = () => {
 
   return (
     <section className="py-14 bg-gradient-to-r from-[#6ab04c]/10 via-green-500/5 to-[#6ab04c]/10 dark:from-[#6ab04c]/5 dark:via-green-500/[0.02] dark:to-[#6ab04c]/5 border-y border-[#6ab04c]/10 dark:border-[#6ab04c]/10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12"

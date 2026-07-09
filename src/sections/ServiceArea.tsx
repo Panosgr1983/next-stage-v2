@@ -14,7 +14,7 @@ const ServiceArea = () => {
 
   return (
     <section className="py-16 bg-slate-50 dark:bg-slate-800/50">
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <motion.div
           ref={ref}
           className="text-center"

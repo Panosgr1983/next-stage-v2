@@ -39,8 +39,11 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark bg-slate-900 text-slate-100' : 'bg-white text-slate-900'}`}>
+      <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-white focus:text-slate-900 focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#6ab04c]">
+        Μετάβαση στο κύριο περιεχόμενο
+      </a>
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-      <main>
+      <main id="main">
         <Hero />
         <WhyChooseUs />
         <Reviews />

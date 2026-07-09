@@ -3,6 +3,7 @@ export default {
   nav: {
     home: 'Home',
     services: 'Services',
+    sales: 'Sales',
     about: 'About Us',
     gallery: 'Our Space',
     testimonials: 'Testimonials',

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -12,6 +12,14 @@ const Gallery = () => {
   });
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const galleryImages = [
     { src: "/images/gallery/DSC_2814.webp", alt: "Χώρος επισκευής" },
@@ -51,7 +59,7 @@ const Gallery = () => {
 
   return (
     <section id="gallery" className="py-20 bg-white dark:bg-slate-900">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"

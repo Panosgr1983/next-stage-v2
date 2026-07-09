@@ -30,6 +30,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
 
   const navLinks = [
     { name: t('nav.services'), href: '#services' },
+    { name: t('nav.sales'), href: '#sales' },
     { name: t('nav.about'), href: '#about' },
     { name: t('nav.gallery'), href: '#gallery' },
     { name: t('nav.testimonials'), href: '#testimonials' },
@@ -47,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
@@ -55,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
           <Logo white={!scrolled || darkMode} />
         </motion.div>
         
-        <div className="hidden md:flex items-center space-x-5">
+        <div className="hidden lg:flex items-center space-x-5">
           <nav>
             <ul className="flex items-center space-x-4">
               {navLinks.map((link, index) => (
@@ -134,7 +135,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
           </div>
         </div>
         
-        <div className="md:hidden flex items-center space-x-2">
+        <div className="lg:hidden flex items-center space-x-2">
           <LanguageToggle />
           <button 
             onClick={toggleDarkMode}
@@ -185,13 +186,13 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="md:hidden absolute w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border-b border-white/10"
+            className="lg:hidden absolute w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border-b border-white/10"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <nav className="container mx-auto px-4 py-6">
+            <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
               <ul className="space-y-4">
                 {navLinks.map((link, index) => (
                   <motion.li 

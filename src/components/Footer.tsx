@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-slate-900 text-slate-200 pt-10 pb-6 text-xs">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           <div>
             <Logo white />
@@ -60,6 +60,11 @@ const Footer: React.FC = () => {
               <li>
                 <a href="#services" className="text-slate-300 hover:text-[#6ab04c] transition-colors duration-200">
                   {t('nav.services')}
+                </a>
+              </li>
+              <li>
+                <a href="#sales" className="text-slate-300 hover:text-[#6ab04c] transition-colors duration-200">
+                  {t('nav.sales')}
                 </a>
               </li>
               <li>

@@ -45,7 +45,7 @@ const Process = () => {
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-slate-800">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: -20 }}
@@ -63,7 +63,7 @@ const Process = () => {
         <div ref={ref} className="relative">
           <div className="hidden lg:block absolute top-24 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-blue-500 via-[#6ab04c] via-amber-500 via-purple-500 to-orange-500 opacity-30"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
