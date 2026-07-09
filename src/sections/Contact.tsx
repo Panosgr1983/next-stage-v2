@@ -281,9 +281,9 @@ const Contact = () => {
             </div>
 
             {/* Google Maps */}
-            <div className="rounded-lg overflow-hidden shadow-sm h-80">
+            <div className="relative rounded-lg overflow-hidden shadow-sm h-80">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.854517261086!2d23.75074937677936!3d38.02191897161675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a26d76b89b29%3A0x400bd2ce2b98c40!2zzqDPgc6_z4bOrs-EzrfPgiDOl867zq_OsSDVoSwgzpPOsc67zqzPhM-DzrkgMTExIDQ3!5e0!3m2!1sel!2sgr!4v1709913425789!5m2!1sel!2sgr"
+                src="https://www.google.com/maps?q=%CE%A0%CF%81%CE%BF%CF%86%CE%AE%CF%84%CE%B7+%CE%97%CE%BB%CE%AF%CE%B1+5,+%CE%93%CE%B1%CE%BB%CE%AC%CF%84%CF%83%CE%B9+111+47&output=embed&z=15"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -291,6 +291,13 @@ const Contact = () => {
                 loading="lazy"
                 title="NextStage Technology Solutions location"
               ></iframe>
+              <div className="absolute inset-0 pointer-events-none flex items-center justify-center z-10">
+                <svg width="30" height="48" viewBox="0 0 30 48" fill="none" className="-mt-6">
+                  <path d="M15 0C6.716 0 0 6.716 0 15C0 18 0.5 20 1.5 22L15 48L28.5 22C29.5 20 30 18 30 15C30 6.716 23.284 0 15 0Z" fill="#6ab04c"/>
+                  <circle cx="15" cy="14" r="7" fill="white"/>
+                  <circle cx="15" cy="14" r="3" fill="#6ab04c"/>
+                </svg>
+              </div>
             </div>
           </motion.div>
         </div>

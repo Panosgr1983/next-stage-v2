@@ -105,10 +105,6 @@ export default {
       title: 'TV, Home Audio & Console Repair',
       description: 'Repairs for TVs, home audio systems and gaming consoles.',
     },
-    supportContract: {
-      title: 'Technical Support Contracts',
-      description: 'Technical support services exclusively for businesses.',
-    },
     osInstallation: {
       title: 'OS Installation / Upgrade',
       description: 'We install any operating system and ensure proper operation.',

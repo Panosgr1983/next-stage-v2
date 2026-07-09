@@ -17,7 +17,6 @@ const Footer: React.FC = () => {
     'proAudio',
     'tvRepair',
     'osInstallation',
-    'supportContract',
   ] as const;
 
   return (

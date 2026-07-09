@@ -96,14 +96,6 @@ const Services = () => {
       bgGradient: 'from-blue-500/20 to-cyan-500/20'
     },
     {
-      icon: <Building2 className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2814.webp",
-      title: t('services.supportContract.title'),
-      description: t('services.supportContract.description'),
-      gradient: 'from-violet-500 to-indigo-500',
-      bgGradient: 'from-violet-500/20 to-indigo-500/20'
-    },
-    {
       icon: <Terminal className="w-8 h-8" />,
       image: "/images/gallery/DSC_2932.webp",
       title: t('services.osInstallation.title'),
