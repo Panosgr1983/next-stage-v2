@@ -56,9 +56,9 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
           <Logo white={!scrolled || darkMode} />
         </motion.div>
         
-        <div className="hidden xl:flex items-center space-x-5">
+        <div className="hidden lg:flex items-center space-x-3 xl:space-x-5">
           <nav>
-            <ul className="flex items-center space-x-4">
+            <ul className="flex items-center space-x-2 lg:space-x-3 xl:space-x-4">
               {navLinks.map((link, index) => (
                 <motion.li 
                   key={link.name}
@@ -68,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
                 >
                   <a 
                     href={link.href}
-                    className={`relative text-sm font-medium whitespace-nowrap transition-all duration-300 group ${
+                    className={`relative text-xs xl:text-sm font-medium whitespace-nowrap transition-all duration-300 group ${
                       scrolled
                         ? 'text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400'
                         : 'text-white hover:text-blue-300'
@@ -82,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
             </ul>
           </nav>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 xl:space-x-4">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -125,17 +125,17 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
             
             <motion.a 
               href="tel:2102116016" 
-              className="flex items-center space-x-1.5 px-3 py-1.5 bg-gradient-to-r from-[#6ab04c] to-blue-600 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-[#6ab04c]/25 transition-all duration-300"
+              className="flex items-center space-x-1.5 px-2.5 xl:px-3 py-1.5 bg-gradient-to-r from-[#6ab04c] to-blue-600 text-white text-xs xl:text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-[#6ab04c]/25 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Phone size={14} />
+              <Phone size={12} />
               <span>210 21 16 016</span>
             </motion.a>
           </div>
         </div>
         
-        <div className="xl:hidden flex items-center space-x-2">
+        <div className="lg:hidden flex items-center space-x-2">
           <LanguageToggle />
           <button 
             onClick={toggleDarkMode}
@@ -186,7 +186,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="xl:hidden absolute w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border-b border-white/10"
+            className="lg:hidden absolute w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border-b border-white/10"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

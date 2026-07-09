@@ -38,7 +38,7 @@ console.log(t('about.title'));
                 className="w-full h-auto object-cover rounded-lg"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-[#6ab04c] text-white p-6 rounded-lg shadow-lg hidden md:block">
+            <div className="absolute -bottom-6 right-4 bg-[#6ab04c] text-white p-6 rounded-lg shadow-lg hidden md:block">
               <p className="font-bold text-2xl">10+</p>
               <p className="text-sm">{t('about.experience')}</p>
             </div>
