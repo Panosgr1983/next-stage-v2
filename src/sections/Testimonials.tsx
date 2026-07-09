@@ -71,7 +71,7 @@ const Testimonials = () => {
               variants={itemVariants}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
             >
-              <div className="absolute -top-4 -left-4 bg-[#6ab04c] rounded-full p-3 shadow-md">
+              <div className="absolute -top-4 sm:-left-4 max-sm:-left-2 bg-[#6ab04c] rounded-full p-3 shadow-md">
                 <Quote className="w-5 h-5 text-white" />
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-6 italic text-lg">"{testimonial.text}"</p>

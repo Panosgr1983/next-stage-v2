@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-10 md:mt-12"
           >
-            <div className="inline-flex flex-col md:flex-row items-center gap-4 md:gap-0 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 px-6 py-4 md:divide-x md:divide-white/10">
+            <div className="inline-flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-0 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 px-6 py-4 md:divide-x md:divide-white/10">
               {features.map((f, i) => (
                 <div key={i} className="flex items-center gap-3 md:px-6">
                   <div className="p-2 bg-white/5 rounded-lg">
