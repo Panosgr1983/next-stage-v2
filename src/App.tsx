@@ -44,13 +44,13 @@ function App() {
         <Hero />
         <WhyChooseUs />
         <Reviews />
+        <Testimonials />
         <Services />
         <Sales />
         <Process />
         <FAQ />
         <About />
         <Gallery />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

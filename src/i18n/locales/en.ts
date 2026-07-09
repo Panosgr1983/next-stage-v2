@@ -40,11 +40,12 @@ export default {
 
   // Reviews
   reviews: {
-    rating: '4.9 / 5',
+    rating: '5.0 / 5',
     stars: '★★★★★',
-    count: 'Based on 50+ customer reviews',
+    count: 'Based on 112+ Google reviews',
     text: 'Hundreds of customers trust NextStage',
     cta: 'See all reviews',
+    link: 'https://share.google/JXdLH9JZNyYm3IoZK',
   },
 
   // Process
@@ -157,20 +158,20 @@ export default {
   
   // Testimonials Section
   testimonials: {
-    title: 'Clients',
-    subtitle: 'Read what our clients say about us',
-    client: 'Client',
+    title: 'Latest Reviews',
+    subtitle: 'See what our customers say about us',
+    client: 'Google Review',
     testimonial1: {
-      name: 'InsertCoin.gr',
-      text: 'Amazing people. Highly trained in their field. Polite and extremely helpful. Every time we gave them our PC for repair or work, it was flawless, the prices were as agreed with no extra or hidden charges, and always on time with the perfect result. They have solved our problems and helped us out of difficult situations with their services. Worth your visit.',
+      name: 'lydiaki galatsi',
+      text: 'Extremely helpful, serious and effective, they know what they are doing, they explain exactly the problem even if you are not technical.',
     },
     testimonial2: {
-      name: 'A. Bokia',
-      text: 'Flawless service, Mr. Nikos is capable, experienced and very polite! I highly recommend him!',
+      name: 'Anastasios Kosmas',
+      text: 'During exam period my PC developed a serious fault, derailing my studying. Then a family friend recommended NextStage. From the very first moment they served me promptly, with honesty and professionalism. My PC was ready in 2 days in perfect condition! Thank you very much!',
     },
     testimonial3: {
-      name: 'S. Soubatzoglou',
-      text: 'Very good service! They are experienced technicians. Friendly and very professional at their work! I highly recommend it.',
+      name: 'Nickos Petsas',
+      text: 'Impeccable work and very nice people!',
     },
   },
   
