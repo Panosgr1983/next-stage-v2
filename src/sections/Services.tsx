@@ -25,7 +25,7 @@ const Services = () => {
   const services = [
     {
       icon: <Laptop className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2814.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/laptop-service_pd6spv.png",
       title: t('services.laptopRepair.title'),
       description: t('services.laptopRepair.description'),
       gradient: 'from-[#6ab04c] to-green-500',
@@ -33,7 +33,7 @@ const Services = () => {
     },
     {
       icon: <Monitor className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2801.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/desktop-service_gt2dmf.png",
       title: t('services.desktopRepair.title'),
       description: t('services.desktopRepair.description'),
       gradient: 'from-blue-500 to-cyan-500',
@@ -41,7 +41,7 @@ const Services = () => {
     },
     {
       icon: <Monitor className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2785.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/imac-service_tzu1ec.png",
       title: t('services.imacRepair.title'),
       description: t('services.imacRepair.description'),
       gradient: 'from-[#6ab04c] to-emerald-500',
@@ -49,7 +49,7 @@ const Services = () => {
     },
     {
       icon: <Laptop className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2938.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/macbook-service_hzltf1.png",
       title: t('services.macbookRepair.title'),
       description: t('services.macbookRepair.description'),
       gradient: 'from-blue-600 to-purple-500',
@@ -57,7 +57,7 @@ const Services = () => {
     },
     {
       icon: <Server className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2796.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/macmini-service_e5yiuv.png",
       title: t('services.macMiniRepair.title'),
       description: t('services.macMiniRepair.description'),
       gradient: 'from-[#6ab04c] to-blue-500',
@@ -65,7 +65,7 @@ const Services = () => {
     },
     {
       icon: <HardDrive className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2792.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/data-recovery_vl2xv3.png",
       title: t('services.dataRecovery.title'),
       description: t('services.dataRecovery.description'),
       gradient: 'from-green-500 to-[#6ab04c]',
@@ -73,7 +73,7 @@ const Services = () => {
     },
     {
       icon: <Gamepad2 className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2938.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/custom-gaming-pc_di2vao.png",
       title: t('services.gamingPc.title'),
       description: t('services.gamingPc.description'),
       gradient: 'from-red-500 to-orange-500',
@@ -81,7 +81,7 @@ const Services = () => {
     },
     {
       icon: <Music className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2926.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/professional-audio-service_p7fvo5.png",
       title: t('services.proAudio.title'),
       description: t('services.proAudio.description'),
       gradient: 'from-purple-500 to-pink-500',
@@ -89,7 +89,7 @@ const Services = () => {
     },
     {
       icon: <Tv className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2796.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/tv-console-service_vlkrhb.png",
       title: t('services.tvRepair.title'),
       description: t('services.tvRepair.description'),
       gradient: 'from-blue-500 to-cyan-500',
@@ -97,7 +97,7 @@ const Services = () => {
     },
     {
       icon: <Terminal className="w-8 h-8" />,
-      image: "/images/gallery/DSC_2932.webp",
+      image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/os-instalation_rdxxns.png",
       title: t('services.osInstallation.title'),
       description: t('services.osInstallation.description'),
       gradient: 'from-orange-500 to-red-500',
