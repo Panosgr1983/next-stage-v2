@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Phone, Mail, MapPin, Clock, Loader2 } from 'lucide-react';
 
-const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORM_ENDPOINT = '/api/contact';
 
 const Contact = () => {
   const { t } = useTranslation();
