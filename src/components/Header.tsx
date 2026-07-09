@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
           <Logo white={!scrolled || darkMode} />
         </motion.div>
         
-        <div className="hidden lg:flex items-center space-x-5">
+        <div className="hidden xl:flex items-center space-x-5">
           <nav>
             <ul className="flex items-center space-x-4">
               {navLinks.map((link, index) => (
@@ -135,7 +135,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
           </div>
         </div>
         
-        <div className="lg:hidden flex items-center space-x-2">
+        <div className="xl:hidden flex items-center space-x-2">
           <LanguageToggle />
           <button 
             onClick={toggleDarkMode}
@@ -186,7 +186,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="lg:hidden absolute w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border-b border-white/10"
+            className="xl:hidden absolute w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border-b border-white/10"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
