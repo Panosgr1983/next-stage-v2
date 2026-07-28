@@ -12,8 +12,8 @@ export default {
   
   // Hero Section
   hero: {
-    titlePrefix: 'Laptop, Desktop & Mac Repair with ',
-    titleHighlight: 'Guarantee',
+    titlePrefix: 'Laptop, Desktop, Mac & ',
+    titleHighlight: 'TV Repair',
     subtitle: 'Specialized technical support for computers, Macs, TVs, home audio systems and gaming consoles.',
     contactButton: 'Call Now',
     servicesButton: 'Contact Form',
@@ -69,44 +69,57 @@ export default {
   services: {
     title: 'Our Services',
     subtitle: 'We offer professional services, prompt and quality service for every customer.',
+    detailDescription: 'With over 25 years of experience, the NextStage team handles diagnosis, repair and maintenance of your equipment with professionalism and reliability. We use high quality parts and provide a warranty on all repairs.',
+    contactUs: 'Contact Us',
+    backToServices: 'Back to Services',
     laptopRepair: {
       title: 'Laptop Repair',
+      subtitle: 'Fast and reliable laptop repair services',
       description: 'We repair all laptop models. Fast and affordable repairs.',
     },
     desktopRepair: {
       title: 'Desktop Repair',
+      subtitle: 'Professional support for desktop computers',
       description: 'Desktop PC repair by specialist professionals.',
     },
     imacRepair: {
       title: 'iMac Repair',
+      subtitle: 'Specialized technical support for iMac',
       description: 'iMac repair by our experienced electronics engineers.',
     },
     macbookRepair: {
       title: 'MacBook Repair',
+      subtitle: 'MacBook repair with high quality parts',
       description: 'We repair any MacBook model with high quality parts.',
     },
     macMiniRepair: {
       title: 'Mac Mini Repair',
+      subtitle: 'Comprehensive Mac Mini repair services',
       description: 'We provide specialized repair services for Apple products.',
     },
     dataRecovery: {
       title: 'Data Recovery',
+      subtitle: 'Recover valuable data from any drive type',
       description: 'We undertake data recovery from any type of hard drive.',
     },
     gamingPc: {
       title: 'Custom Gaming PC Builds',
+      subtitle: 'Build top-tier gaming computers',
       description: 'Custom Gaming PC builds with top-tier component selection.',
     },
     proAudio: {
       title: 'Professional Audio Repair & Maintenance',
+      subtitle: 'Specialized support for audio systems',
       description: 'Specialized support for pro audio systems, amplifiers and equipment.',
     },
     tvRepair: {
       title: 'TV, Home Audio & Console Repair',
+      subtitle: 'TV, audio system and console repairs',
       description: 'Repairs for TVs, home audio systems and gaming consoles.',
     },
     osInstallation: {
       title: 'OS Installation / Upgrade',
+      subtitle: 'Operating system installation and upgrades',
       description: 'We install any operating system and ensure proper operation.',
     },
   },
@@ -140,10 +153,9 @@ export default {
     title: 'About NextStage',
     subtitle: 'Your Trusted Technology Partner',
     description: 'With over 25 years of experience in technology, NextStage provides professional repair and support services. From laptops and Macs to professional audio and consoles, our team of specialized technicians ensures top-quality repairs.',
-    experience: '25+ Years Experience',
+    experience: 'Years of Experience',
     customers: 'Happy Customers',
-    services: 'Services',
-    certified: 'Certified Technicians',
+    certified: 'Trained Technicians',
   },
   
   // Gallery Section
@@ -241,5 +253,10 @@ export default {
     darkMode: 'Switch to dark mode',
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
+  },
+
+  notFound: {
+    title: 'Page not found',
+    home: 'Back to Home',
   },
 };

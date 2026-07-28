@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Hero from './sections/Hero';
 import WhyChooseUs from './sections/WhyChooseUs';
 import Reviews from './sections/Reviews';
@@ -12,11 +15,28 @@ import Gallery from './sections/Gallery';
 import Testimonials from './sections/Testimonials';
 import Sales from './sections/Sales';
 import Contact from './sections/Contact';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
+import ServiceDetail from './pages/ServiceDetail';
 import './i18n/config';
 
-function App() {
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <WhyChooseUs />
+      <Reviews />
+      <Testimonials />
+      <Services />
+      <Sales />
+      <Process />
+      <FAQ />
+      <About />
+      <Gallery />
+      <Contact />
+    </>
+  );
+}
+
+function AppLayout() {
   const { i18n } = useTranslation();
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
@@ -27,9 +47,7 @@ function App() {
   });
 
   useEffect(() => {
-    // Update class on document element
     document.documentElement.classList.toggle('dark', darkMode);
-    // Save preference to localStorage
     localStorage.setItem('darkMode', String(darkMode));
   }, [darkMode]);
 
@@ -44,21 +62,22 @@ function App() {
       </a>
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <main id="main">
-        <Hero />
-        <WhyChooseUs />
-        <Reviews />
-        <Testimonials />
-        <Services />
-        <Sales />
-        <Process />
-        <FAQ />
-        <About />
-        <Gallery />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/service/:slug" element={<ServiceDetail />} />
+        </Routes>
       </main>
       <Footer />
       <ScrollToTop />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppLayout />
+    </BrowserRouter>
   );
 }
 

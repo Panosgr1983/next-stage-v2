@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
               <span className="text-[#6ab04c]">{t('hero.titleHighlight')}</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-slate-300 mb-6 max-w-xl">
+            <p className="text-lg md:text-xl text-slate-300 mb-6 max-w-xl invisible">
               {t('hero.subtitle')}
             </p>
 

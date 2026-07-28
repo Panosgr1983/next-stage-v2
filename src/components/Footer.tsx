@@ -1,7 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Facebook, Mail, MapPin, Phone } from 'lucide-react';
 import Logo from './Logo';
+
+const serviceSlugs: Record<string, string> = {
+  laptopRepair: 'laptop-repair',
+  desktopRepair: 'desktop-repair',
+  imacRepair: 'imac-repair',
+  macbookRepair: 'macbook-repair',
+  macMiniRepair: 'macmini-repair',
+  dataRecovery: 'data-recovery',
+  gamingPc: 'gaming-pc',
+  proAudio: 'pro-audio',
+  tvRepair: 'tv-console-repair',
+  osInstallation: 'os-installation',
+};
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -13,6 +27,7 @@ const Footer: React.FC = () => {
     'imacRepair',
     'macbookRepair',
     'macMiniRepair',
+    'dataRecovery',
     'gamingPc',
     'proAudio',
     'tvRepair',
@@ -90,18 +105,18 @@ const Footer: React.FC = () => {
               <ul className="space-y-1">
                 {serviceKeys.slice(0, 5).map((key) => (
                   <li key={key}>
-                    <a href="#services" className="text-slate-300 hover:text-[#6ab04c] transition-colors duration-200">
+                    <Link to={`/service/${serviceSlugs[key]}`} className="text-slate-300 hover:text-[#6ab04c] transition-colors duration-200">
                       {t(`services.${key}.title`)}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
               <ul className="space-y-1">
                 {serviceKeys.slice(5).map((key) => (
                   <li key={key}>
-                    <a href="#services" className="text-slate-300 hover:text-[#6ab04c] transition-colors duration-200">
+                    <Link to={`/service/${serviceSlugs[key]}`} className="text-slate-300 hover:text-[#6ab04c] transition-colors duration-200">
                       {t(`services.${key}.title`)}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

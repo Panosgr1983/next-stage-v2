@@ -10,9 +10,8 @@ const About = () => {
   });
 console.log(t('about.title'));
   const stats = [
-    { value: 10, label: t('about.experience') },
-    { value: 2000, label: t('about.customers') },
-    { value: 8, label: t('about.services') },
+    { value: 25, label: t('about.experience') },
+    { value: 10000, label: t('about.customers') },
     { value: 5, label: t('about.certified') }
   ];
 
@@ -39,7 +38,7 @@ console.log(t('about.title'));
               />
             </div>
             <div className="absolute -bottom-6 right-4 bg-[#6ab04c] text-white p-6 rounded-lg shadow-lg hidden md:block">
-              <p className="font-bold text-2xl">10+</p>
+              <p className="font-bold text-2xl">25+</p>
               <p className="text-sm">{t('about.experience')}</p>
             </div>
           </motion.div>
@@ -62,7 +61,7 @@ console.log(t('about.title'));
             </p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+            <div className="grid grid-cols-3 gap-6">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}

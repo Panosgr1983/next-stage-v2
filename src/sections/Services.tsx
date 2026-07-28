@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { 
   Laptop, 
   Monitor, 
   Server,
   HardDrive,
-  Building2,
   Terminal,
   Gamepad2,
   Music,
@@ -24,6 +24,7 @@ const Services = () => {
 
   const services = [
     {
+      slug: 'laptop-repair',
       icon: <Laptop className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/laptop-service_pd6spv.png",
       title: t('services.laptopRepair.title'),
@@ -32,6 +33,7 @@ const Services = () => {
       bgGradient: 'from-[#6ab04c]/20 to-green-500/20'
     },
     {
+      slug: 'desktop-repair',
       icon: <Monitor className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/desktop-service_gt2dmf.png",
       title: t('services.desktopRepair.title'),
@@ -40,6 +42,7 @@ const Services = () => {
       bgGradient: 'from-blue-500/20 to-cyan-500/20'
     },
     {
+      slug: 'imac-repair',
       icon: <Monitor className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/imac-service_tzu1ec.png",
       title: t('services.imacRepair.title'),
@@ -48,6 +51,7 @@ const Services = () => {
       bgGradient: 'from-[#6ab04c]/20 to-emerald-500/20'
     },
     {
+      slug: 'macbook-repair',
       icon: <Laptop className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/macbook-service_hzltf1.png",
       title: t('services.macbookRepair.title'),
@@ -56,6 +60,7 @@ const Services = () => {
       bgGradient: 'from-blue-600/20 to-purple-500/20'
     },
     {
+      slug: 'macmini-repair',
       icon: <Server className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/macmini-service_e5yiuv.png",
       title: t('services.macMiniRepair.title'),
@@ -64,6 +69,7 @@ const Services = () => {
       bgGradient: 'from-[#6ab04c]/20 to-blue-500/20'
     },
     {
+      slug: 'data-recovery',
       icon: <HardDrive className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/data-recovery_vl2xv3.png",
       title: t('services.dataRecovery.title'),
@@ -72,6 +78,7 @@ const Services = () => {
       bgGradient: 'from-green-500/20 to-[#6ab04c]/20'
     },
     {
+      slug: 'gaming-pc',
       icon: <Gamepad2 className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620783/custom-gaming-pc_di2vao.png",
       title: t('services.gamingPc.title'),
@@ -80,6 +87,7 @@ const Services = () => {
       bgGradient: 'from-red-500/20 to-orange-500/20'
     },
     {
+      slug: 'pro-audio',
       icon: <Music className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/professional-audio-service_p7fvo5.png",
       title: t('services.proAudio.title'),
@@ -88,6 +96,7 @@ const Services = () => {
       bgGradient: 'from-purple-500/20 to-pink-500/20'
     },
     {
+      slug: 'tv-console-repair',
       icon: <Tv className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/tv-console-service_vlkrhb.png",
       title: t('services.tvRepair.title'),
@@ -96,6 +105,7 @@ const Services = () => {
       bgGradient: 'from-blue-500/20 to-cyan-500/20'
     },
     {
+      slug: 'os-installation',
       icon: <Terminal className="w-8 h-8" />,
       image: "https://res.cloudinary.com/duabzt63b/image/upload/f_auto/v1783620782/os-instalation_rdxxns.png",
       title: t('services.osInstallation.title'),
@@ -170,6 +180,9 @@ const Services = () => {
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
             >
+              <Link to={`/service/${service.slug}`} className="absolute inset-0 z-10" aria-label={service.title}>
+                <span className="sr-only">Μάθετε περισσότερα</span>
+              </Link>
               {/* Image Background */}
               <div className="relative h-48 overflow-hidden">
                 <div
