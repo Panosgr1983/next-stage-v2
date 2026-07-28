@@ -23,7 +23,7 @@ function App() {
     if (savedMode !== null) {
       return savedMode === 'true';
     }
-    return false;
+    return true;
   });
 
   useEffect(() => {
