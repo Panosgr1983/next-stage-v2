@@ -16,6 +16,7 @@ import Testimonials from './sections/Testimonials';
 import Sales from './sections/Sales';
 import Contact from './sections/Contact';
 import ServiceDetail from './pages/ServiceDetail';
+import ScrollToTopOnNav from './components/ScrollToTopOnNav';
 import './i18n/config';
 
 function HomePage() {
@@ -76,6 +77,7 @@ function AppLayout() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTopOnNav />
       <AppLayout />
     </BrowserRouter>
   );
