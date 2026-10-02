@@ -181,16 +181,16 @@ export default {
     subtitle: 'See what our customers say about us',
     client: 'Google Review',
     testimonial1: {
-      name: 'lydiaki galatsi',
-      text: 'Extremely helpful, serious and effective, they know what they are doing, they explain exactly the problem even if you are not technical.',
+      name: "lydiaki galatsi",
+      text: "Very helpful, serious and efficient, they know what they are doing, they explain the problem exactly to you even if you are not well versed in technical matters. I highly recommend them. I had an issue with my computer, an hp pavilion gaming laptop, where the screen stuck unimaginably... I had made some attempts to fix it (opening and cleaning the fans, format, reinstalling the graphics card driver, etc.) I didn't know what else it was, so I…"
     },
     testimonial2: {
-      name: 'Anastasios Kosmas',
-      text: 'During exam period my PC developed a serious fault, derailing my studying. Then a family friend recommended NextStage. From the very first moment they served me promptly, with honesty and professionalism. My PC was ready in 2 days in perfect condition! Thank you very much!',
+      name: "Anastasios Kosmas",
+      text: "In the middle of the exam, my pc suffered a serious breakdown, as a result of which my reading was largely derailed. Then a family friend of ours urged us to bring the computer to the store in question and to Mr. Nikos. Here I should add that although we have had the computer for years, we had never proceeded with any kind of maintenance, while Mr. Nikos found out that the pc was set up badly, 2 out of the three memories were burned and one hard…"
     },
     testimonial3: {
-      name: 'Theodoros Kanakaris',
-      text: "I recently visited this store for an HDD recovery, and honestly, I wasn't expecting to recover anything. The team worked miracles and successfully restored all of my data. I highly recommend their service.",
+      name: "Theodoros Kanakaris",
+      text: "I recently visited this store for an HDD recovery, and honestly, I wasn’t expecting to recover anything. The team worked miracles and successfully restored all of my data. I highly recommend their service."
     },
   },
   

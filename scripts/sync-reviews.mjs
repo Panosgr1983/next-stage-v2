@@ -33,15 +33,14 @@ async function placesApi(path, opts = {}) {
 async function translate(text, target) {
   try {
     const res = await fetch(
-      `https://translation.googleapis.com/language/translate/v2?key=${encodeURIComponent(API_KEY)}&format=text`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ q: text, target }),
-      }
+      `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${encodeURIComponent(target)}&dt=t&q=${encodeURIComponent(text)}`,
+      { headers: { 'User-Agent': 'Mozilla/5.0' } }
     );
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    const out = data?.data?.translations?.[0]?.translatedText;
+    const out = (data?.[0] || [])
+      .map((seg) => seg?.[0] || '')
+      .join('');
     return out && out !== text ? out : null;
   } catch (e) {
     console.warn(`Μετάφραση απέτυχε (${target}):`, e.message);
