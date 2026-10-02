@@ -182,11 +182,11 @@ export default {
     client: 'Google Review',
     testimonial1: {
       name: "lydiaki galatsi",
-      text: "Very helpful, serious and efficient, they know what they are doing, they explain the problem exactly to you even if you are not well versed in technical matters. I highly recommend them. I had an issue with my computer, an hp pavilion gaming laptop, where the screen stuck unimaginably... I had made some attempts to fix it (opening and cleaning the fans, format, reinstalling the graphics card driver, etc.) I didn't know what else it was, so I…"
+      text: "Φοβερά εξυπηρετικοί, σοβαροί και αποτελεσματικοί, ξέρουν τί κάνουν, σου εξηγούν ακριβώς το πρόβλημα ακόμα κι αν δεν γνωρίζεις καλά από τεχνικά θέματα. Τους συστήνω ανεπιφύλακτα. Είχα ένα θέμα με τον υπολογιστή μου ένα hp pavilion gaming laptop το οποίο κολλάγε η οθόνη αφάνταστα ... Είχα κάνει κάποιες προσπάθειες να το φτιάξω (άνοιγμα και καθάρισμα στα ανεμιστηρακια, format, επανεγκατάσταση driver κάρτας γραφικών κλπ) δεν ήξερα τι άλλο ήταν οπότε…"
     },
     testimonial2: {
       name: "Anastasios Kosmas",
-      text: "In the middle of the exam, my pc suffered a serious breakdown, as a result of which my reading was largely derailed. Then a family friend of ours urged us to bring the computer to the store in question and to Mr. Nikos. Here I should add that although we have had the computer for years, we had never proceeded with any kind of maintenance, while Mr. Nikos found out that the pc was set up badly, 2 out of the three memories were burned and one hard…"
+      text: "Μεσούσης της εξεταστικής το pc μου εμφάνισε σοβαρή βλάβη, με αποτέλεσμα το διάβασμά μου να εκτροχιαστει σε μεγάλο βαθμό. Τότε μια οικογενειακή μας φίλη μας παρότρυνε να φέρουμε τον υπολογιστή σρο εν λόγω μαγαζί και στον κύριο Νίκο. Εδώ να προσθέσω πως μολονότι έχουμε χρόνια τον υπολογιστη, δεν είχαμε προχωρήσει ποτέ σε κάποιου ειδους συντήρηση, ενώ ο κύριος Νίκος διαπίστωσε το κακό στήσιμο του pc, το κάψιμο 2 εκ των τριών μνημών και τη…"
     },
     testimonial3: {
       name: "Theodoros Kanakaris",
