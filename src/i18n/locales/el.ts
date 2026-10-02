@@ -188,7 +188,7 @@ export default {
     },
     testimonial3: {
       name: "Theodoros Kanakaris",
-      text: "I recently visited this store for an HDD recovery, and honestly, I wasn’t expecting to recover anything. The team worked miracles and successfully restored all of my data. I highly recommend their service."
+      text: "Επισκέφτηκα πρόσφατα αυτό το κατάστημα για ανάκτηση σκληρού δίσκου και ειλικρινά, δεν περίμενα να ανακτήσω τίποτα. Η ομάδα έκανε θαύματα και αποκατέστησε με επιτυχία όλα τα δεδομένα μου. Συνιστώ ανεπιφύλακτα την υπηρεσία τους."
     },
   },
   

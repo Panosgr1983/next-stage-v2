@@ -30,22 +30,51 @@ async function placesApi(path, opts = {}) {
   return res.json();
 }
 
-async function translate(text, target) {
+async function translateOfficial(text, target) {
   try {
     const res = await fetch(
-      `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${encodeURIComponent(target)}&dt=t&q=${encodeURIComponent(text)}`,
-      { headers: { 'User-Agent': 'Mozilla/5.0' } }
+      `https://translation.googleapis.com/language/translate/v2?key=${encodeURIComponent(API_KEY)}&format=text`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ q: text, target }),
+      }
     );
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) return null;
     const data = await res.json();
-    const out = (data?.[0] || [])
-      .map((seg) => seg?.[0] || '')
-      .join('');
-    return out && out !== text ? out : null;
-  } catch (e) {
-    console.warn(`Μετάφραση απέτυχε (${target}):`, e.message);
+    return data?.data?.translations?.[0]?.translatedText || null;
+  } catch {
     return null;
   }
+}
+
+async function translateGtx(text, target) {
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const res = await fetch(
+        `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${encodeURIComponent(target)}&dt=t&q=${encodeURIComponent(text)}`,
+        { headers: { 'User-Agent': 'Mozilla/5.0' } }
+      );
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const out = (data?.[0] || [])
+        .map((seg) => seg?.[0] || '')
+        .join('');
+      if (out && out !== text) return out;
+      return null;
+    } catch (e) {
+      if (attempt === 1) await new Promise((r) => setTimeout(r, 3000));
+      else console.warn(`gtx μετάφραση απέτυχε (${target}):`, e.message);
+    }
+  }
+  return null;
+}
+
+async function translate(text, target) {
+  return (
+    (await translateOfficial(text, target)) ||
+    (await translateGtx(text, target))
+  );
 }
 
 function trim(text) {
@@ -111,17 +140,23 @@ async function main() {
 
   const results = [];
   for (const r of reviews) {
-    const el = r.lang.startsWith('el')
-      ? r.text
-      : (await translate(r.text, 'el')) || r.text;
-    const en = r.lang.startsWith('en')
-      ? r.text
-      : (await translate(r.text, 'en')) || r.text;
-    results.push({
-      name: r.name,
-      el: trim(el),
-      en: trim(en),
-    });
+    let el = null;
+    let en = null;
+    if (r.lang.startsWith('el')) {
+      el = trim(r.text);
+      en = await translate(r.text, 'en');
+      if (en) en = trim(en);
+    } else if (r.lang.startsWith('en')) {
+      en = trim(r.text);
+      el = await translate(r.text, 'el');
+      if (el) el = trim(el);
+    } else {
+      el = await translate(r.text, 'el');
+      if (el) el = trim(el);
+      en = await translate(r.text, 'en');
+      if (en) en = trim(en);
+    }
+    results.push({ name: r.name, el, en });
   }
 
   let changed = false;
@@ -145,8 +180,16 @@ async function main() {
       `$1${rating.toFixed(1)} / 5$2`
     );
 
+    let missing = 0;
     for (let i = 0; i < 3; i++) {
-      src = updateBlock(src, i + 1, results[i].name, results[i][lang]);
+      if (results[i][lang]) {
+        src = updateBlock(src, i + 1, results[i].name, results[i][lang]);
+      } else {
+        missing++;
+      }
+    }
+    if (missing > 0) {
+      console.warn(`⚠ ${file}: απέτυχε μετάφραση σε ${missing} κριτική(ές) — διατηρούνται τα υπάρχοντα κείμενα.`);
     }
 
     if (src !== readFileSync(path, 'utf8')) {
