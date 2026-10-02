@@ -8,6 +8,7 @@ export interface ServiceData {
   titleKey: string;
   subtitleKey: string;
   descriptionKey: string;
+  metaDescriptionKey: string;
   headerImage: string;
   gallery: ServiceGalleryItem[];
 }
@@ -20,6 +21,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.laptopRepair.title',
     subtitleKey: 'services.laptopRepair.subtitle',
     descriptionKey: 'services.laptopRepair.description',
+    metaDescriptionKey: 'services.laptopRepair.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620782/laptop-service_pd6spv.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620782/laptop-service_pd6spv.png`, alt: 'Επισκευή Laptop' },
@@ -32,6 +34,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.desktopRepair.title',
     subtitleKey: 'services.desktopRepair.subtitle',
     descriptionKey: 'services.desktopRepair.description',
+    metaDescriptionKey: 'services.desktopRepair.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620782/desktop-service_gt2dmf.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620782/desktop-service_gt2dmf.png`, alt: 'Επισκευή Desktop' },
@@ -44,6 +47,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.imacRepair.title',
     subtitleKey: 'services.imacRepair.subtitle',
     descriptionKey: 'services.imacRepair.description',
+    metaDescriptionKey: 'services.imacRepair.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620783/imac-service_tzu1ec.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620783/imac-service_tzu1ec.png`, alt: 'Επισκευή iMac' },
@@ -55,6 +59,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.macbookRepair.title',
     subtitleKey: 'services.macbookRepair.subtitle',
     descriptionKey: 'services.macbookRepair.description',
+    metaDescriptionKey: 'services.macbookRepair.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620783/macbook-service_hzltf1.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620783/macbook-service_hzltf1.png`, alt: 'Επισκευή MacBook' },
@@ -67,6 +72,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.macMiniRepair.title',
     subtitleKey: 'services.macMiniRepair.subtitle',
     descriptionKey: 'services.macMiniRepair.description',
+    metaDescriptionKey: 'services.macMiniRepair.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620783/macmini-service_e5yiuv.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620783/macmini-service_e5yiuv.png`, alt: 'Επισκευή Mac Mini' },
@@ -78,6 +84,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.dataRecovery.title',
     subtitleKey: 'services.dataRecovery.subtitle',
     descriptionKey: 'services.dataRecovery.description',
+    metaDescriptionKey: 'services.dataRecovery.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620783/data-recovery_vl2xv3.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620783/data-recovery_vl2xv3.png`, alt: 'Ανάκτηση Δεδομένων' },
@@ -89,6 +96,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.gamingPc.title',
     subtitleKey: 'services.gamingPc.subtitle',
     descriptionKey: 'services.gamingPc.description',
+    metaDescriptionKey: 'services.gamingPc.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620783/custom-gaming-pc_di2vao.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620783/custom-gaming-pc_di2vao.png`, alt: 'Custom Gaming PC' },
@@ -101,6 +109,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.proAudio.title',
     subtitleKey: 'services.proAudio.subtitle',
     descriptionKey: 'services.proAudio.description',
+    metaDescriptionKey: 'services.proAudio.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620782/professional-audio-service_p7fvo5.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620782/professional-audio-service_p7fvo5.png`, alt: 'Επαγγελματικός Ήχος' },
@@ -112,6 +121,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.tvRepair.title',
     subtitleKey: 'services.tvRepair.subtitle',
     descriptionKey: 'services.tvRepair.description',
+    metaDescriptionKey: 'services.tvRepair.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620782/tv-console-service_vlkrhb.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620782/tv-console-service_vlkrhb.png`, alt: 'Επισκευή TV & Κονσόλες' },
@@ -123,6 +133,7 @@ export const servicesData: ServiceData[] = [
     titleKey: 'services.osInstallation.title',
     subtitleKey: 'services.osInstallation.subtitle',
     descriptionKey: 'services.osInstallation.description',
+    metaDescriptionKey: 'services.osInstallation.metaDescription',
     headerImage: `${CLOUDINARY}/v1783620782/os-instalation_rdxxns.png`,
     gallery: [
       { src: `${CLOUDINARY}/v1783620782/os-instalation_rdxxns.png`, alt: 'Εγκατάσταση Λειτουργικού' },

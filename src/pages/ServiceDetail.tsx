@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
 import { getServiceBySlug } from '../data/services';
+import { setPageMeta, resetPageMeta } from '../seo';
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const service = slug ? getServiceBySlug(slug) : undefined;
 
   const [currentImg, setCurrentImg] = useState(0);
@@ -19,6 +19,76 @@ const ServiceDetail = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [service]);
+
+  useEffect(() => {
+    if (!service) return;
+    const lang = i18n.language === 'en' ? 'en' : 'el';
+    const area = lang === 'en' ? 'Galatsi' : 'Γαλάτσι';
+    const title = `${t(service.titleKey)} ${area} | NextStage`;
+    const description = t(service.metaDescriptionKey);
+    const canonical = `https://nextstage-service.gr/service/${service.slug}`;
+
+    setPageMeta({
+      title,
+      description,
+      canonical,
+      jsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: t(service.titleKey),
+          url: canonical,
+          description: t(service.subtitleKey),
+          provider: {
+            '@type': 'ComputerRepairShop',
+            name: 'NextStage Technology Solutions',
+            telephone: '210 21 16 016',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Προφήτη Ηλία 5',
+              addressLocality: 'Γαλάτσι',
+              postalCode: '111 47',
+              addressCountry: 'GR',
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 38.01037,
+              longitude: 23.75298,
+            },
+          },
+          areaServed: { '@type': 'City', name: area },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: t('nav.home'),
+              item: 'https://nextstage-service.gr/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: t('nav.services'),
+              item: 'https://nextstage-service.gr/#services',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: t(service.titleKey),
+              item: canonical,
+            },
+          ],
+        },
+      ],
+    });
+
+    return () => {
+      resetPageMeta();
+    };
+  }, [service, i18n.language, t]);
 
   if (!service) {
     return (
