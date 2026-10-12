@@ -41,7 +41,7 @@ export default {
   reviews: {
     rating: '5.0 / 5',
     stars: '★★★★★',
-    count: 'Βασισμένο σε 120+ αξιολογήσεις Google',
+    count: 'Βασισμένο σε 121+ αξιολογήσεις Google',
     text: 'Εμπιστεύονται τη NextStage εκατοντάδες πελάτες',
     cta: 'Δείτε όλες τις αξιολογήσεις',
     link: 'https://share.google/JXdLH9JZeoYm3IoZK',

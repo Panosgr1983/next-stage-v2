@@ -43,7 +43,7 @@ export default {
   reviews: {
     rating: '5.0 / 5',
     stars: '★★★★★',
-    count: 'Based on 120+ Google reviews',
+    count: 'Based on 121+ Google reviews',
     text: 'Hundreds of customers trust NextStage',
     cta: 'See all reviews',
     link: 'https://share.google/JXdLH9JZNyYm3IoZK',
