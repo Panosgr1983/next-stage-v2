@@ -43,7 +43,7 @@ export default {
  reviews: {
  rating: '5.0 / 5',
  stars: '★★★★★',
- count: 'Based on 121+ Google reviews',
+ count: 'Based on 122+ Google reviews',
  text: 'Hundreds of customers trust NextStage',
  cta: 'See all reviews',
  link: 'https://share.google/JXdLH9JZNyYm3IoZK',
@@ -189,8 +189,8 @@ export default {
  text: "In the middle of the exam, my pc suffered a serious breakdown, as a result of which my reading was largely derailed. Then a family friend of ours urged us to bring the computer to the store in question and to Mr. Nikos. Here I should add that although we have had the computer for years, we had never proceeded with any kind of maintenance, while Mr. Nikos found out that the pc was set up badly, 2 out of the three memories were burned and one hard…"
  },
  testimonial3: {
- name: "Theodoros Kanakaris",
- text: "I recently visited this store for an HDD recovery, and honestly, I wasn’t expecting to recover anything. The team worked miracles and successfully restored all of my data. I highly recommend their service."
+   name: "Theodoros Kanakaris",
+   text: "I recently visited this store for an HDD recovery, and honestly, I wasn’t expecting to recover anything. The team worked miracles and successfully restored all of my data. I highly recommend their service."
  },
  },
  
