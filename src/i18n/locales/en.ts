@@ -181,16 +181,16 @@ export default {
  subtitle: 'See what our customers say about us',
  client: 'Google Review',
  testimonial1: {
- name: "lydiaki galatsi",
- text: "Very helpful, serious and efficient, they know what they are doing, they explain the problem exactly to you even if you are not well versed in technical matters. I highly recommend them. I had an issue with my computer, an hp pavilion gaming laptop, where the screen stuck unimaginably... I had made some attempts to fix it (opening and cleaning the fans, format, reinstalling the graphics card driver, etc.) I didn't know what else it was, so I…"
+   name: "ΔΗΜΗΤΡΗΣ",
+   text: "I took my computer in due to Windows 10 support ending (it's old and can't be upgraded to Windows 11), and even though he had a lot of work, he had it ready the next day, having installed Windows 10 with support valid until 2030. On top of that, it now runs like a rocket, whereas before it crawled and kept freezing. Nikos is very helpful, efficient, and he analyzes the problem for you, suggesting the right solution, without the usual and…"
  },
  testimonial2: {
- name: "Anastasios Kosmas",
- text: "In the middle of the exam, my pc suffered a serious breakdown, as a result of which my reading was largely derailed. Then a family friend of ours urged us to bring the computer to the store in question and to Mr. Nikos. Here I should add that although we have had the computer for years, we had never proceeded with any kind of maintenance, while Mr. Nikos found out that the pc was set up badly, 2 out of the three memories were burned and one hard…"
+   name: "Βασίλειος Μαυρομμάτης",
+   text: "I had an issue with temperatures and freezing on an ASUS Rog Strix G16 laptop and Nikos dealt with it immediately. The next day he had it ready despite his workload. He did an excellent job at a low labor cost and now my laptop flies again! I highly recommend him!"
  },
  testimonial3: {
    name: "Theodoros Kanakaris",
-   text: "I recently visited this store for an HDD recovery, and honestly, I wasn’t expecting to recover anything. The team worked miracles and successfully restored all of my data. I highly recommend their service."
+   text: "I recently visited this store for hard drive recovery and honestly, I didn't expect to recover anything. The team worked wonders and successfully restored all my data. I highly recommend their service."
  },
  },
  

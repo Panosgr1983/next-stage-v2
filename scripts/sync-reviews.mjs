@@ -160,7 +160,7 @@ async function main() {
       en = await translate(r.text, 'en');
       if (en) en = trim(en);
     }
-    results.push({ name: r.name, el, en, lang: r.lang });
+    results.push({ name: r.name, el, en, raw: trim(r.text), lang: r.lang });
   }
 
   let changed = false;
@@ -181,16 +181,18 @@ async function main() {
 
     src = replaceSingle(src, `(rating: ')[^']*(')`, `$1${rating.toFixed(1)} / 5$2`);
 
-    let missing = 0;
+    let fallbacks = 0;
     for (let i = 0; i < 3; i++) {
-      if (results[i][lang]) {
-        src = updateBlock(src, i + 1, results[i].name, results[i][lang]);
-      } else {
-        missing++;
-        console.warn(`⚠ ${file}: κριτική #${i + 1} (${results[i].name}) χωρίς μετάφραση — διατηρείται το υπάρχον κείμενο.`);
+      // Αν η μετάφραση αποτύχει, χρησιμοποιείται το ΑΡΧΙΚΟ κείμενο.
+      // Ποτέ όνομα νέας κριτικής με κείμενο παλιάς (mismatch).
+      const val = results[i][lang] || results[i].raw;
+      if (!results[i][lang]) {
+        fallbacks++;
+        console.warn(`⚠ ${file}: κριτική #${i + 1} (${results[i].name}) χωρίς μετάφραση — χρησιμοποιείται το πρωτότυπο κείμενο.`);
       }
+      src = updateBlock(src, i + 1, results[i].name, val);
     }
-    if (missing > 0) console.warn(`⚠ ${file}: ${missing} κριτική(ές) χωρίς μετάφραση (κρατήθηκαν τα υπάρχοντα κείμενα).`);
+    if (fallbacks > 0) console.warn(`⚠ ${file}: ${fallbacks} κριτική(ές) χωρίς μετάφραση (πρωτότυπο κείμενο).`);
 
     if (src !== before) {
       if (DRY) console.log(`(dry-run) θα ενημερωνόταν: ${file}`);
